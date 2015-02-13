@@ -1,0 +1,4 @@
+﻿@model StuffNThings.Models.TypeOfPostViewModel
+
+@Html.LabelFor(m => m.SelectedTypeOfPostId)
+@Html.DropDownListFor(m => m.SelectedTypeOfPostId, Model.TypeOfPosts)

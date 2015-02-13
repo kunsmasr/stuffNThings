@@ -1,0 +1,28 @@
+﻿@model StuffNThings.Models.StateViewModel
+
+@using(Ajax.BeginForm("SelectState", "Account", new AjaxOptions { UpdateTargetId = "Regions" }))
+{
+    @Html.LabelFor(m => m.SelectedStateId)
+    @Html.DropDownListFor(m => m.SelectedStateId, Model.States)
+}
+
+<script>
+    $(document).ready(function () {
+        PopulateRegionSelector();
+        $('#SelectedStateId').change(function () {
+            PopulateRegionSelector();
+        });
+    });
+
+    function PopulateRegionSelector() {
+        var val = $('#SelectedStateId').val();
+        $.ajax({
+            url: "/Account/SelectState",
+            type: "GET",
+            data: { selectedStateId: val }
+        })
+        .done(function (partialViewResult) {
+            $("#Regions").html(partialViewResult);
+        });
+    };
+</script>

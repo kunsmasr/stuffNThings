@@ -1,0 +1,7 @@
+﻿@model StuffNThings.Models.RegionViewModel
+
+@if(Model != null && Model.Regions != null && Model.Regions.Count() > 0)
+{
+    @Html.LabelFor(m => m.SelectedRegionId)
+    @Html.DropDownListFor(m => m.SelectedRegionId, Model.Regions)
+}

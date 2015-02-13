@@ -1,0 +1,18 @@
+﻿@model IEnumerable<StuffNThings.Repository.Models.Post>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@foreach(var item in Model)
+{
+    <h4>@item.Title --- @item.Id</h4>
+    <div>@item.Description</div>
+    <div>@item.CreatedDate</div>
+    <div>@item.ModifiedDate</div>
+    <div>@item.LastBumpDate</div>
+    <div>@Html.ActionLink("View Post", "Details", "Post", new { id = item.Id }, null)</div>
+    <hr />
+}
+
+@Html.ActionLink("Create Post", "Create", "Post")

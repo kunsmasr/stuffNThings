@@ -1,0 +1,26 @@
+﻿@model StuffNThings.Repository.Models.Comment
+
+<p id="msg"></p>
+Comment @Html.TextBox("Body")
+<div><input type="button" id="PostComment" value="Add Comment" /></div>
+
+@using(Html.BeginScriptContext())
+{
+    Html.AddScriptFile("~/Scripts/jquery-2.1.1.min.js");
+    Html.AddScriptBlock(
+        @<script type="text/javascript">
+            $(function() {
+                $('#PostComment').click(function () {
+                    var url = "/Post/PersistComment";
+                    var bodyContnet = $("#Body").val();
+                    var postId = @Convert.ToInt32(ViewData["postId"]);
+                    $.post(url, { postId: postId, bodyContent: bodyContnet }, function (data) {
+                        $("#msg").html(data);
+                    });
+                });
+            });
+        </script>
+, true);
+}
+
+<!--will need to accept a url in the viewdata from the calling view (to determine which controller to use)-->

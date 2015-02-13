@@ -1,0 +1,107 @@
+﻿@model StuffNThings.Repository.Models.Post
+@using Newtonsoft.Json
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Post</legend>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Title)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Title)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Price)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Price)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Location)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Location)
+    </div>
+
+    @if(Model.LastBumpDate.Equals(DateTime.MinValue))
+    {
+        <text>No Bumps (for now)</text>
+    }
+    else
+    {
+        @Html.DisplayFor(model => model.NumberOfBumps) <text>Last Bump: @Html.DisplayFor(model => model.LastBumpDate)</text>
+    }
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.CreatedDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CreatedDate)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.ModifiedDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ModifiedDate)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Regions)
+    </div>
+    <div class="display-field">
+        <ul>
+            @foreach(var region in Model.Regions)
+            {
+                <li>@region.Name</li>
+            }
+        </ul>
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index", "Home")
+</p>
+
+<div id="comments">
+    <p id="rData"></p>
+    @section scripts
+    {
+        <script type="text/javascript">
+            $(function() {
+                var url = "/Post/GetPostComments";
+                var stuff = @Html.Raw(JsonConvert.SerializeObject(this.Model));
+                var postId = stuff.Id;
+                var temp = '<table><tr><th>Body:</th><th>Date:</th></tr>';
+                $.get(url, { postId: postId }, function (data) {
+                    $.each(data, function(i, val){
+                        temp += '<tr><td>' + val.Body + '</td>' + '<td>' + val.CreatedDate + '</td></tr>';
+                    });
+                    temp += '</table>';
+                    $('#rData').html(temp);
+                });
+            });
+        </script>
+    }
+</div>
+
+
+
+<div id="commentEditor">
+    @Html.Partial("_CommentEditor", new ViewDataDictionary { { "postId", Model.Id } })
+</div>

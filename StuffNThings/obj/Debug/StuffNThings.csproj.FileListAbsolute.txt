@@ -1,0 +1,256 @@
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\StuffNThings.dll.config
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\StuffNThings.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\StuffNThings.pdb
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\AjaxControlToolkit.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\AjaxMin.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\Antlr3.Runtime.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\DotNetOpenAuth.Core.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\EntityFramework.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\EntityFramework.SqlServer.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\Forloop.HtmlHelpers.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\HtmlAgilityPack.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\Microsoft.Data.Edm.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\Microsoft.Data.OData.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\Microsoft.WindowsAzure.Configuration.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\Microsoft.WindowsAzure.Storage.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\Newtonsoft.Json.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\StuffNThings.Repository.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\System.Net.Http.Extensions.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\System.Net.Http.Formatting.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\System.Net.Http.Primitives.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\System.Spatial.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\System.Web.Helpers.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\System.Web.Http.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\System.Web.Http.OData.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\System.Web.Http.WebHost.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\System.Web.Mvc.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\System.Web.Optimization.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\System.Web.Razor.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\System.Web.WebPages.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\System.Web.WebPages.Razor.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\WebGrease.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\WebMatrix.Data.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\WebMatrix.WebData.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\Org.Mentalis.Security.Cryptography.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\Mono.Math.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\StuffNThings.Repository.pdb
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\Antlr3.Runtime.pdb
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\DotNetOpenAuth.Core.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\EntityFramework.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\EntityFramework.SqlServer.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\Forloop.HtmlHelpers.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\HtmlAgilityPack.pdb
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\HtmlAgilityPack.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\Microsoft.Data.Edm.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\Microsoft.Data.OData.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\Microsoft.WindowsAzure.Storage.pdb
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\Microsoft.WindowsAzure.Storage.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\Newtonsoft.Json.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\System.Net.Http.Extensions.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\System.Net.Http.Formatting.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\System.Net.Http.Primitives.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\System.Spatial.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\System.Web.Helpers.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\System.Web.Http.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\System.Web.Http.OData.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\System.Web.Http.WebHost.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\System.Web.Mvc.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\System.Web.Optimization.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\System.Web.Razor.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\System.Web.WebPages.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\System.Web.WebPages.Razor.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\WebMatrix.Data.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\WebMatrix.WebData.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\Org.Mentalis.Security.Cryptography.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\Mono.Math.xml
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\ar\AjaxControlToolkit.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\cs\AjaxControlToolkit.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\de\AjaxControlToolkit.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\es\AjaxControlToolkit.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\fr\AjaxControlToolkit.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\he\AjaxControlToolkit.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\hi\AjaxControlToolkit.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\it\AjaxControlToolkit.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\ja\AjaxControlToolkit.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\ko\AjaxControlToolkit.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\nl\AjaxControlToolkit.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\pl\AjaxControlToolkit.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\pt\AjaxControlToolkit.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\ru\AjaxControlToolkit.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\tr-TR\AjaxControlToolkit.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\zh-CHS\AjaxControlToolkit.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\zh-CHT\AjaxControlToolkit.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\de\System.Spatial.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\es\System.Spatial.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\fr\System.Spatial.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\it\System.Spatial.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\ja\System.Spatial.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\ko\System.Spatial.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\ru\System.Spatial.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\obj\Debug\StuffNThings.csproj.App.config
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\obj\Debug\StuffNThings.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\obj\Debug\StuffNThings.dll
+C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings\obj\Debug\StuffNThings.pdb
+E:\Source\StuffNThings\StuffNThings\bin\StuffNThings.dll.config
+E:\Source\StuffNThings\StuffNThings\bin\StuffNThings.dll
+E:\Source\StuffNThings\StuffNThings\bin\StuffNThings.pdb
+E:\Source\StuffNThings\StuffNThings\bin\AjaxControlToolkit.dll
+E:\Source\StuffNThings\StuffNThings\bin\AjaxMin.dll
+E:\Source\StuffNThings\StuffNThings\bin\Antlr3.Runtime.dll
+E:\Source\StuffNThings\StuffNThings\bin\DotNetOpenAuth.AspNet.dll
+E:\Source\StuffNThings\StuffNThings\bin\DotNetOpenAuth.Core.dll
+E:\Source\StuffNThings\StuffNThings\bin\DotNetOpenAuth.OAuth.Consumer.dll
+E:\Source\StuffNThings\StuffNThings\bin\DotNetOpenAuth.OAuth.dll
+E:\Source\StuffNThings\StuffNThings\bin\DotNetOpenAuth.OpenId.dll
+E:\Source\StuffNThings\StuffNThings\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+E:\Source\StuffNThings\StuffNThings\bin\EntityFramework.dll
+E:\Source\StuffNThings\StuffNThings\bin\EntityFramework.SqlServer.dll
+E:\Source\StuffNThings\StuffNThings\bin\Forloop.HtmlHelpers.dll
+E:\Source\StuffNThings\StuffNThings\bin\HtmlAgilityPack.dll
+E:\Source\StuffNThings\StuffNThings\bin\Microsoft.Data.Edm.dll
+E:\Source\StuffNThings\StuffNThings\bin\Microsoft.Data.OData.dll
+E:\Source\StuffNThings\StuffNThings\bin\Microsoft.Web.Infrastructure.dll
+E:\Source\StuffNThings\StuffNThings\bin\Microsoft.Web.WebPages.OAuth.dll
+E:\Source\StuffNThings\StuffNThings\bin\Microsoft.WindowsAzure.Configuration.dll
+E:\Source\StuffNThings\StuffNThings\bin\Microsoft.WindowsAzure.Storage.dll
+E:\Source\StuffNThings\StuffNThings\bin\Newtonsoft.Json.dll
+E:\Source\StuffNThings\StuffNThings\bin\StuffNThings.Repository.dll
+E:\Source\StuffNThings\StuffNThings\bin\System.Net.Http.Extensions.dll
+E:\Source\StuffNThings\StuffNThings\bin\System.Net.Http.Formatting.dll
+E:\Source\StuffNThings\StuffNThings\bin\System.Net.Http.Primitives.dll
+E:\Source\StuffNThings\StuffNThings\bin\System.Spatial.dll
+E:\Source\StuffNThings\StuffNThings\bin\System.Web.Helpers.dll
+E:\Source\StuffNThings\StuffNThings\bin\System.Web.Http.dll
+E:\Source\StuffNThings\StuffNThings\bin\System.Web.Http.OData.dll
+E:\Source\StuffNThings\StuffNThings\bin\System.Web.Http.WebHost.dll
+E:\Source\StuffNThings\StuffNThings\bin\System.Web.Mvc.dll
+E:\Source\StuffNThings\StuffNThings\bin\System.Web.Optimization.dll
+E:\Source\StuffNThings\StuffNThings\bin\System.Web.Razor.dll
+E:\Source\StuffNThings\StuffNThings\bin\System.Web.WebPages.Deployment.dll
+E:\Source\StuffNThings\StuffNThings\bin\System.Web.WebPages.dll
+E:\Source\StuffNThings\StuffNThings\bin\System.Web.WebPages.Razor.dll
+E:\Source\StuffNThings\StuffNThings\bin\WebGrease.dll
+E:\Source\StuffNThings\StuffNThings\bin\WebMatrix.Data.dll
+E:\Source\StuffNThings\StuffNThings\bin\WebMatrix.WebData.dll
+E:\Source\StuffNThings\StuffNThings\bin\Org.Mentalis.Security.Cryptography.dll
+E:\Source\StuffNThings\StuffNThings\bin\Mono.Math.dll
+E:\Source\StuffNThings\StuffNThings\bin\StuffNThings.Repository.pdb
+E:\Source\StuffNThings\StuffNThings\bin\Antlr3.Runtime.pdb
+E:\Source\StuffNThings\StuffNThings\bin\DotNetOpenAuth.AspNet.xml
+E:\Source\StuffNThings\StuffNThings\bin\DotNetOpenAuth.Core.xml
+E:\Source\StuffNThings\StuffNThings\bin\DotNetOpenAuth.OAuth.xml
+E:\Source\StuffNThings\StuffNThings\bin\DotNetOpenAuth.OAuth.Consumer.xml
+E:\Source\StuffNThings\StuffNThings\bin\DotNetOpenAuth.OpenId.xml
+E:\Source\StuffNThings\StuffNThings\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+E:\Source\StuffNThings\StuffNThings\bin\EntityFramework.xml
+E:\Source\StuffNThings\StuffNThings\bin\EntityFramework.SqlServer.xml
+E:\Source\StuffNThings\StuffNThings\bin\Forloop.HtmlHelpers.xml
+E:\Source\StuffNThings\StuffNThings\bin\HtmlAgilityPack.pdb
+E:\Source\StuffNThings\StuffNThings\bin\HtmlAgilityPack.xml
+E:\Source\StuffNThings\StuffNThings\bin\Microsoft.Data.Edm.xml
+E:\Source\StuffNThings\StuffNThings\bin\Microsoft.Data.OData.xml
+E:\Source\StuffNThings\StuffNThings\bin\Microsoft.Web.WebPages.OAuth.xml
+E:\Source\StuffNThings\StuffNThings\bin\Microsoft.WindowsAzure.Storage.pdb
+E:\Source\StuffNThings\StuffNThings\bin\Microsoft.WindowsAzure.Storage.xml
+E:\Source\StuffNThings\StuffNThings\bin\Newtonsoft.Json.xml
+E:\Source\StuffNThings\StuffNThings\bin\System.Net.Http.Extensions.xml
+E:\Source\StuffNThings\StuffNThings\bin\System.Net.Http.Formatting.xml
+E:\Source\StuffNThings\StuffNThings\bin\System.Net.Http.Primitives.xml
+E:\Source\StuffNThings\StuffNThings\bin\System.Spatial.xml
+E:\Source\StuffNThings\StuffNThings\bin\System.Web.Helpers.xml
+E:\Source\StuffNThings\StuffNThings\bin\System.Web.Http.xml
+E:\Source\StuffNThings\StuffNThings\bin\System.Web.Http.OData.xml
+E:\Source\StuffNThings\StuffNThings\bin\System.Web.Http.WebHost.xml
+E:\Source\StuffNThings\StuffNThings\bin\System.Web.Mvc.xml
+E:\Source\StuffNThings\StuffNThings\bin\System.Web.Optimization.xml
+E:\Source\StuffNThings\StuffNThings\bin\System.Web.Razor.xml
+E:\Source\StuffNThings\StuffNThings\bin\System.Web.WebPages.xml
+E:\Source\StuffNThings\StuffNThings\bin\System.Web.WebPages.Deployment.xml
+E:\Source\StuffNThings\StuffNThings\bin\System.Web.WebPages.Razor.xml
+E:\Source\StuffNThings\StuffNThings\bin\WebMatrix.Data.xml
+E:\Source\StuffNThings\StuffNThings\bin\WebMatrix.WebData.xml
+E:\Source\StuffNThings\StuffNThings\bin\Org.Mentalis.Security.Cryptography.xml
+E:\Source\StuffNThings\StuffNThings\bin\Mono.Math.xml
+E:\Source\StuffNThings\StuffNThings\bin\ar\AjaxControlToolkit.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\cs\AjaxControlToolkit.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\de\AjaxControlToolkit.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\es\AjaxControlToolkit.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\fr\AjaxControlToolkit.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\he\AjaxControlToolkit.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\hi\AjaxControlToolkit.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\it\AjaxControlToolkit.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\ja\AjaxControlToolkit.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\ko\AjaxControlToolkit.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\nl\AjaxControlToolkit.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\pl\AjaxControlToolkit.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\pt\AjaxControlToolkit.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\ru\AjaxControlToolkit.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\tr-TR\AjaxControlToolkit.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\zh-CHS\AjaxControlToolkit.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\zh-CHT\AjaxControlToolkit.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\de\Microsoft.Data.Edm.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\es\Microsoft.Data.Edm.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\fr\Microsoft.Data.Edm.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\it\Microsoft.Data.Edm.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\ja\Microsoft.Data.Edm.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\ko\Microsoft.Data.Edm.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\ru\Microsoft.Data.Edm.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\de\Microsoft.Data.OData.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\es\Microsoft.Data.OData.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\fr\Microsoft.Data.OData.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\it\Microsoft.Data.OData.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\ja\Microsoft.Data.OData.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\ko\Microsoft.Data.OData.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\ru\Microsoft.Data.OData.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\de\System.Spatial.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\es\System.Spatial.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\fr\System.Spatial.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\it\System.Spatial.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\ja\System.Spatial.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\ko\System.Spatial.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\ru\System.Spatial.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\zh-Hans\System.Spatial.resources.dll
+E:\Source\StuffNThings\StuffNThings\bin\zh-Hant\System.Spatial.resources.dll
+E:\Source\StuffNThings\StuffNThings\obj\Debug\StuffNThings.csproj.App.config
+E:\Source\StuffNThings\StuffNThings\obj\Debug\StuffNThings.csprojResolveAssemblyReference.cache
+E:\Source\StuffNThings\StuffNThings\obj\Debug\StuffNThings.dll
+E:\Source\StuffNThings\StuffNThings\obj\Debug\StuffNThings.pdb

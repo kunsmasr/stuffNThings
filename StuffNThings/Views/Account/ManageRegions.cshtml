@@ -1,0 +1,64 @@
+﻿@model StuffNThings.Models.ManageRegionModels
+
+@{
+    ViewBag.Title = "ManageRegions";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using(Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+
+    <fieldset>
+        @Html.HiddenFor(m => m.UserId)
+        <legend>Manage Regions</legend>
+        <ol>
+            <li>
+                @Html.DropDownListFor(m => m.StateViewModel.SelectedStateId,
+                    new SelectList(Model.StateViewModel.States, "Value", "Text", Model.StateViewModel.SelectedStateId))
+            </li>
+            <li>
+                @Html.DropDownListFor(m => m.RegionViewModel.SelectedRegionId,
+                    new SelectList(Model.RegionViewModel.Regions, "Value", "Text", Model.RegionViewModel.SelectedRegionId))
+            </li>
+        </ol>
+        <input type="submit" value="Update" />
+    </fieldset>
+}
+
+<script type="text/javascript">
+    function getRegions(stateId) {
+        $.ajax({
+            url: "@Url.Action("GetRegionsJSON", "Account")",
+            data: { stateId: stateId },
+            dataType: "json",
+            type: "POST",
+            error: function () {
+                alert("An error occurred.");
+            },
+            success: function (result) {
+                $('#RegionViewModel_SelectedRegionId').empty();
+                // when the AJAX succeeds refresh the ddl container with
+                // the partial HTML returned by the PopulatePurchaseGameLists controller action
+                if (result.length > 0) {
+                    $.each(result, function (result) {
+                        $('#RegionViewModel_SelectedRegionId').append(
+                            $('<option/>')
+                                 .attr('value', this.Value)
+                                 .text(this.Text)
+                        );
+                    });
+                }
+            }
+        });
+    }
+
+    $(document).ready(function () {
+        $("#StateViewModel_SelectedStateId").change(function () {
+            var stateId = $("#StateViewModel_SelectedStateId").val();
+
+            getRegions(stateId);
+        });
+    });
+</script>
