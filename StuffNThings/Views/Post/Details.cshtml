@@ -87,13 +87,13 @@
                 var url = "/Post/GetPostComments";
                 var stuff = @Html.Raw(JsonConvert.SerializeObject(this.Model));
                 var postId = stuff.Id;
-                var temp = '<table><tr><th>Body:</th><th>Date:</th></tr>';
+                var commentTable = '<table><tr><th>Body:</th><th>Date:</th></tr>';
                 $.get(url, { postId: postId }, function (data) {
                     $.each(data, function(i, val){
-                        temp += '<tr><td>' + val.Body + '</td>' + '<td>' + val.CreatedDate + '</td></tr>';
+                        commentTable += '<tr><td>' + val.Body + '</td>' + '<td>' + val.CreatedDate + '</td></tr>';
                     });
-                    temp += '</table>';
-                    $('#rData').html(temp);
+                    commentTable += '</table>';
+                    $('#rData').html(commentTable);
                 });
             });
         </script>
