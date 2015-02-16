@@ -277,6 +277,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\knockout-3.2.0.debug.js" />
     <Content Include="Scripts\knockout-3.2.0.js" />
+    <Content Include="Scripts\maskInput.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -327,6 +328,7 @@
     <Content Include="Views\Shared\_RegionSelector.cshtml" />
     <Content Include="Views\Shared\_StateSelector.cshtml" />
     <Content Include="Views\Account\ManageRegions.cshtml" />
+    <Content Include="Views\Account\ManagePassword.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

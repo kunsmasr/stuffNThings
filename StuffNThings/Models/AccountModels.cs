@@ -13,8 +13,7 @@ namespace StuffNThings.Models
 	{
 		public UsersContext()
 			: base("DefaultConnection")
-		{
-		}
+		{}
 
 		public DbSet<UserProfile> UserProfiles { get; set; }
 	}
@@ -26,7 +25,6 @@ namespace StuffNThings.Models
 		[DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
 		public int UserId { get; set; }
 		public string UserName { get; set; }
-		public string Email { get; set; }
 		public string PhoneNumber { get; set; }
 	}
 
@@ -75,8 +73,9 @@ namespace StuffNThings.Models
 
 	public class RegisterModel
 	{
-		[Required]
-		[Display(Name = "User name")]
+		[Required(ErrorMessage = "The email address is required")]
+		[Display(Name = "Email address")]
+		[EmailAddress(ErrorMessage = "Invalid Email Address")]
 		public string UserName { get; set; }
 
 		[Required]
@@ -89,17 +88,15 @@ namespace StuffNThings.Models
 		[Display(Name = "Confirm password")]
 		[Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
 		public string ConfirmPassword { get; set; }
-
-		[Display(Name = "Email")]
-		public string Email { get; set; }
-
-		[DataType(DataType.PhoneNumber)]
+		
 		[Display(Name = "Phone Number")]
 		public string PhoneNumber { get; set; }
+	}
 
-		public StateViewModel StateViewModel { get; set; }
-
-		public RegionViewModel RegionViewModel { get; set; }
+	public class ManageProfileModel
+	{
+		[Display(Name = "Phone Number")]
+		public string PhoneNumber { get; set; }
 	}
 
 	public class ExternalLogin

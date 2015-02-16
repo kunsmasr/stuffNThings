@@ -11,14 +11,8 @@
 
 <p>You're logged in as <strong>@User.Identity.Name</strong>.</p>
 
-@if (ViewBag.HasLocalPassword)
-{
-    @Html.Partial("_ChangePasswordPartial")
-}
-else
-{ 
-    @Html.Partial("_SetPasswordPartial")
-}
+@Html.ActionLink("Change Password", "ManagePassword", "Account") <br />
+@Html.ActionLink("Manage Regions", "ManageRegions", "Account")
 
 <section id="externalLogins">
     @Html.Action("RemoveExternalLogins")

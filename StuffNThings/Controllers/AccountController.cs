@@ -83,7 +83,7 @@ namespace StuffNThings.Controllers
 				// Attempt to register the user
 				try
 				{
-					WebSecurity.CreateUserAndAccount(model.UserName, model.Password, new {Email = model.Email, PhoneNumber = model.PhoneNumber});
+					WebSecurity.CreateUserAndAccount(model.UserName, model.Password, new {PhoneNumber = model.PhoneNumber});
 					WebSecurity.Login(model.UserName, model.Password);
 
 					return RedirectToAction("ManageRegions", "Account");
@@ -145,6 +145,7 @@ namespace StuffNThings.Controllers
 				message == ManageMessageId.ChangePasswordSuccess ? "Your password has been changed."
 				: message == ManageMessageId.SetPasswordSuccess ? "Your password has been set."
 				: message == ManageMessageId.RemoveLoginSuccess ? "The external login was removed."
+				: message == ManageMessageId.UpdateRegionsSuccess ? "Your regions have been updated."
 				: "";
 			ViewBag.HasLocalPassword = OAuthWebSecurity.HasLocalAccount(WebSecurity.GetUserId(User.Identity.Name));
 			ViewBag.ReturnUrl = Url.Action("Manage");
@@ -180,7 +181,7 @@ namespace StuffNThings.Controllers
 					var selectedRegion = model.RegionViewModel.SelectedRegionId;
 					locationRepository.PersistUserRegions(model.UserId, selectedRegion);
 
-					return RedirectToAction("Manage", "Account");
+					return RedirectToAction("Manage", new { Message = ManageMessageId.UpdateRegionsSuccess });
 				}
 				catch(Exception ex)
 				{
@@ -200,11 +201,21 @@ namespace StuffNThings.Controllers
 		}
 
 		//
-		// POST: /Account/Manage
+		// GET: /Account/Manage
+
+		public ActionResult ManagePassword()
+		{
+			ViewBag.HasLocalPassword = OAuthWebSecurity.HasLocalAccount(WebSecurity.GetUserId(User.Identity.Name));
+			ViewBag.ReturnUrl = Url.Action("Manage");
+			return View();
+		}
+
+		//
+		// POST: /Account/ManagePassword
 
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public ActionResult Manage(LocalPasswordModel model)
+		public ActionResult ManagePassword(LocalPasswordModel model)
 		{
 			bool hasLocalAccount = OAuthWebSecurity.HasLocalAccount(WebSecurity.GetUserId(User.Identity.Name));
 			ViewBag.HasLocalPassword = hasLocalAccount;
@@ -455,6 +466,7 @@ namespace StuffNThings.Controllers
 			ChangePasswordSuccess,
 			SetPasswordSuccess,
 			RemoveLoginSuccess,
+			UpdateRegionsSuccess
 		}
 
 		internal class ExternalLoginResult : ActionResult
