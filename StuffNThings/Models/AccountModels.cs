@@ -6,6 +6,7 @@ using System.Data.Entity;
 using System.Globalization;
 using System.Web.Security;
 using StuffNThings.Models;
+using StuffNThings.Repository.Models;
 
 namespace StuffNThings.Models
 {
@@ -97,6 +98,7 @@ namespace StuffNThings.Models
 	{
 		[Display(Name = "Phone Number")]
 		public string PhoneNumber { get; set; }
+		public List<Region> Regions { get; set; }
 	}
 
 	public class ExternalLogin

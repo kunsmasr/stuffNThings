@@ -104,3 +104,8 @@ StuffNThings.Tests/obj/Debug/StuffNThings.Tests.csprojResolveAssemblyReference.c
 StuffNThings.Tests/obj/Debug/StuffNThings.Tests.dll
 bin/**
 obj/**
+StuffNThings/obj/**
+StuffNThings/bin/**
+StuffNThings.Repository/obj/**
+StuffNThings.Repository/bin/**
+**.cache

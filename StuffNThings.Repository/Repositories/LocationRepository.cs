@@ -72,6 +72,22 @@ namespace StuffNThings.Repository.Repositories
 			}
 		}
 
+		public IEnumerable<Region> GetRegionsByUserId(int userId)
+		{
+			using (var conn = new SqlConnection(_connectionString))
+			{
+				var commandText = @"SELECT r.* FROM UserRegion ur JOIN Region r ON ur.RegionId = r.Id WHERE UserId = @userId";
+				var command = new SqlCommand(commandText, conn);
+
+				var parameters = new[] {new SqlParameter {ParameterName = "userId", DbType = DbType.Int32, Value = userId}};
+				command.Parameters.AddRange(parameters);
+
+				conn.Open();
+
+				return GetRegionsFromCommand(command);
+			}
+		}
+
 		public void PersistPostRegions(int postId, IEnumerable<Region> regions)
 		{
 			var regionIdsString = string.Join("|", regions.Select(r=> r.Id));
@@ -91,19 +107,17 @@ namespace StuffNThings.Repository.Repositories
 			}
 		}
 
-		public void PersistUserRegions(int userId, int singleRegionId)
+		public void PersistUserRegions(int userId, int singleRegionId, int stateId)
 		{
-			var regions = new List<Region>();
-			var region = GetRegionById(singleRegionId);
+			var regionIds = new List<int>();
+			regionIds.Add(singleRegionId);
 
-			regions.Add(region);
-
-			PersistUserRegions(userId, regions);
+			PersistUserRegions(userId, regionIds, stateId);
 		}
 
-		public void PersistUserRegions(int userId, IEnumerable<Region> regions)
+		public void PersistUserRegions(int userId, IEnumerable<int> regionIds, int stateId)
 		{
-			var regionIdsString = string.Join("|", regions.Select(r=> r.Id));
+			var regionIdsString = string.Join("|", regionIds.Select(r => r.ToString()));
 
 			using (var conn = new SqlConnection(_connectionString))
 			{
@@ -112,6 +126,7 @@ namespace StuffNThings.Repository.Repositories
 				command.CommandType = CommandType.StoredProcedure;
 
 				var parameters = new [] {new SqlParameter{ParameterName = "userId", DbType = DbType.Int32, Value = userId},
+										 new SqlParameter{ParameterName = "stateId", DbType = DbType.Int32, Value = stateId},
 										 new SqlParameter{ParameterName = "regionIdsString", DbType = DbType.String, Value = regionIdsString}};
 				command.Parameters.AddRange(parameters);
 
@@ -124,7 +139,7 @@ namespace StuffNThings.Repository.Repositories
 		{
 			using(var conn = new SqlConnection(_connectionString))
 			{
-				var commandText = @"SELECT * FROM [State] WHERE CountryId = @countryId";
+				var commandText = @"SELECT * FROM [State] WHERE CountryId = @countryId ORDER BY [Name]";
 				var command = new SqlCommand(commandText, conn);
 
 				var parameters = new[] { new SqlParameter { ParameterName = "countryId", DbType = DbType.Int32, Value = countryId } };
@@ -195,7 +210,7 @@ namespace StuffNThings.Repository.Repositories
 				Id = (int)dr["Id"],
 				Name = (string)dr["Name"],
 				StateId = (int)dr["StateId"],
-				Description = (string)dr["Description"],
+				Description = dr["Description"] == DBNull.Value ? string.Empty : (string)dr["Description"],
 				BannerImageUrl = dr["BannerImageUrl"] == DBNull.Value ? string.Empty : (string)dr["BannerImageUrl"],
 				IsArchived = (bool)dr["IsArchived"],
 				CreatedDate = dr["CreatedDate"] == DBNull.Value ? DateTime.MinValue : (DateTime)dr["CreatedDate"],

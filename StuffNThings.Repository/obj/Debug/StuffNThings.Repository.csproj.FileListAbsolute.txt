@@ -5,6 +5,6 @@ C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings.R
 C:\Users\Scott\Documents\Visual Studio 2013\Projects\StuffNThings\StuffNThings.Repository\obj\Debug\StuffNThings.Repository.pdb
 E:\Source\StuffNThings\StuffNThings.Repository\bin\Debug\StuffNThings.Repository.dll
 E:\Source\StuffNThings\StuffNThings.Repository\bin\Debug\StuffNThings.Repository.pdb
-E:\Source\StuffNThings\StuffNThings.Repository\obj\Debug\StuffNThings.Repository.csprojResolveAssemblyReference.cache
 E:\Source\StuffNThings\StuffNThings.Repository\obj\Debug\StuffNThings.Repository.dll
 E:\Source\StuffNThings\StuffNThings.Repository\obj\Debug\StuffNThings.Repository.pdb
+E:\Source\StuffNThings\StuffNThings.Repository\obj\Debug\StuffNThings.Repository.csprojResolveAssemblyReference.cache

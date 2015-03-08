@@ -9,7 +9,7 @@ using StuffNThings.Models;
 
 namespace StuffNThings.Models
 {
-	public class ManageRegionModels
+	public class ManageRegionModel
 	{
 		public int UserId { get; set; }
 		public StateViewModel StateViewModel { get; set; }

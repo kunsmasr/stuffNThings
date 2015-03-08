@@ -1,4 +1,8 @@
-﻿@model StuffNThings.Models.ManageRegionModels
+﻿@model StuffNThings.Models.ManageRegionModel
+
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/jquery.bootstrap-duallistbox.min.js"></script>
+<link rel="stylesheet" type="text/css" href="~/Content/bootstrap-duallistbox.min.css">
 
 @{
     ViewBag.Title = "ManageRegions";
@@ -11,19 +15,28 @@
     @Html.ValidationSummary()
 
     <fieldset>
-        @Html.HiddenFor(m => m.UserId)
+        @Html.HiddenFor(m => m.UserId, new { @id = "hv" })
+        <input type="hidden" id="RegionListChange" />
         <legend>Manage Regions</legend>
         <ol>
             <li>
                 @Html.DropDownListFor(m => m.StateViewModel.SelectedStateId,
-                    new SelectList(Model.StateViewModel.States, "Value", "Text", Model.StateViewModel.SelectedStateId))
+                    new SelectList(Model.StateViewModel.States, "Value", "Text", Model.StateViewModel.SelectedStateId), "-- Select a State --", new { @class = "form-control" })
             </li>
             <li>
-                @Html.DropDownListFor(m => m.RegionViewModel.SelectedRegionId,
-                    new SelectList(Model.RegionViewModel.Regions, "Value", "Text", Model.RegionViewModel.SelectedRegionId))
+                @if (Model.RegionViewModel != null)
+                {
+                    @Html.ListBoxFor(m => m.RegionViewModel.SelectedRegionIds,
+                        new SelectList(Model.RegionViewModel.Regions, "Value", "Text"))
+                }
+                else
+                {
+                    @Html.ListBoxFor(m => m.RegionViewModel.SelectedRegionIds, Enumerable.Empty<SelectListItem>())
+                }
+
             </li>
         </ol>
-        <input type="submit" value="Update" />
+        <input type="submit" value="Update" id="submitForm" />
         <p>
             @Html.ActionLink("Return to Profile", "Manage", "Account")
         </p>
@@ -31,37 +44,89 @@
 }
 
 <script type="text/javascript">
-    function getRegions(stateId) {
-        $.ajax({
-            url: "@Url.Action("GetRegionsJSON", "Account")",
-            data: { stateId: stateId },
-            dataType: "json",
-            type: "POST",
-            error: function () {
-                alert("An error occurred.");
-            },
-            success: function (result) {
-                $('#RegionViewModel_SelectedRegionId').empty();
-                // when the AJAX succeeds refresh the ddl container with
-                // the partial HTML returned by the PopulatePurchaseGameLists controller action
-                if (result.length > 0) {
-                    $.each(result, function (result) {
-                        $('#RegionViewModel_SelectedRegionId').append(
-                            $('<option/>')
-                                 .attr('value', this.Value)
-                                 .text(this.Text)
-                        );
-                    });
+    function displayRegionControl(isVisible) {
+        var regionControl = $('ol li:nth-child(2)');
+        var updateButton = $('#submitForm');
+
+        if (isVisible) {
+            regionControl.show();
+            updateButton.show();
+        }
+        else {
+            regionControl.hide();
+            updateButton.hide();
+        }
+    };
+
+    jQuery(function ($) {
+        if ($("#StateViewModel_SelectedStateId").val() == "")
+            displayRegionControl(false);
+
+        // Initialize the region listbox change's hidden value.
+        $('#RegionListChange').val(false);
+
+        // Convert the mvc listbox into a bootstrap-listbox
+        var regionList = $('select[id="RegionViewModel_SelectedRegionIds"]').bootstrapDualListbox();
+
+        $('#StateViewModel_SelectedStateId').change(function () {
+            var stateId = $('#StateViewModel_SelectedStateId').val();
+            var userId = $('#hv').val();
+           
+           // A state was selected and its regions are attempted to be gathered.
+            if (stateId) {
+                $.ajax({
+                    url: '@Url.Action("GetRegionsJSON", "Account")',
+                    data: { userId: userId, stateId: stateId },
+                    dataType: "json",
+                    type: "POST",
+                    error: function () {
+                        alert("An error occurred.");
+                    },
+                    success: function (result) {
+                        regionList.bootstrapDualListbox('refresh', 'true');
+                        $('#RegionViewModel_SelectedRegionIds').empty();
+                        // When the AJAX succeeds refresh the ddl container with the selectedItemList from the GetRegionsJSON controller action.
+                        if (result.length > 0) {
+                            displayRegionControl(true);
+                            $.each(result, function (result) {
+                                $('#RegionViewModel_SelectedRegionIds').append(
+                                    $('<option/>')
+                                         .attr('value', this.Value)
+                                         .text(this.Text)
+                                         .attr('selected', this.Selected)
+                                );
+                            });
+                            $('#RegionListChange').val(false);
+                        }
+                        regionList.bootstrapDualListbox('refresh', 'true');
+                    }
+                });
+            }
+            else // State select list has no selected value.
+                displayRegionControl(false);
+        });
+
+        // Hide the move all buttons for the bootstrap-listboxes.
+        $('select[name="RegionViewModel.SelectedRegionIds_helper1"]').parent().find('.moveall').hide();
+        $('select[name="RegionViewModel.SelectedRegionIds_helper2"]').parent().find('.removeall').hide();
+
+        // A change has been made to the region list.
+        $('[id^=bootstrap-duallistbox-]').change(function () {
+            $('#RegionListChange').val(true);
+        });
+
+        // Warn the user that their region changes have not been saved.
+        $('#StateViewModel_SelectedStateId').focus(function () {
+            if ($('#RegionListChange').val() === 'true') {
+                var noSave = confirm('You have made changes to your selected regions without saving. \n\n Do you want to continue? \n \
+                    "OK" - Continue without saving (Allows the state to be changed and changes lost). \n \
+                    "Cancel" - Allow me to save.');
+                if (noSave) {
+                    $('#RegionListChange').val(false);
                 }
             }
+                
         });
-    }
 
-    $(document).ready(function () {
-        $("#StateViewModel_SelectedStateId").change(function () {
-            var stateId = $("#StateViewModel_SelectedStateId").val();
-
-            getRegions(stateId);
-        });
     });
 </script>

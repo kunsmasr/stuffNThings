@@ -12,7 +12,9 @@ using WebMatrix.WebData;
 using StuffNThings.Filters;
 using StuffNThings.Repository;
 using StuffNThings.Models;
+using StuffNThings.Utilities;
 using StuffNThings.Repository.Repositories;
+using StuffNThings.Repository.Models;
 
 namespace StuffNThings.Controllers
 {
@@ -141,36 +143,60 @@ namespace StuffNThings.Controllers
 
 		public ActionResult Manage(ManageMessageId? message)
 		{
+			var locationRepository = new LocationRepository(_connectionString);
+			var model = new ManageProfileModel();
+
+			model.Regions = locationRepository.GetRegionsByUserId(WebSecurity.CurrentUserId).ToList();
+
 			ViewBag.StatusMessage =
 				message == ManageMessageId.ChangePasswordSuccess ? "Your password has been changed."
 				: message == ManageMessageId.SetPasswordSuccess ? "Your password has been set."
 				: message == ManageMessageId.RemoveLoginSuccess ? "The external login was removed."
 				: message == ManageMessageId.UpdateRegionsSuccess ? "Your regions have been updated."
 				: "";
-			ViewBag.HasLocalPassword = OAuthWebSecurity.HasLocalAccount(WebSecurity.GetUserId(User.Identity.Name));
+			//ViewBag.HasLocalPassword = OAuthWebSecurity.HasLocalAccount(WebSecurity.GetUserId(User.Identity.Name));
 			ViewBag.ReturnUrl = Url.Action("Manage");
-			return View();
+			return View(model);
 		}
 
 		//
 		// GET: /Account/ManageRegions
-
 		[HttpGet]
 		public ActionResult ManageRegions()
 		{
-			var model = new ManageRegionModels();
-			model.UserId = WebSecurity.CurrentUserId;
+			var userId = WebSecurity.CurrentUserId;
+
+			if (userId == 0) //user is not logged in
+				return RedirectToAction("Index", "Home");
+
+			var locationRepository = new LocationRepository(_connectionString);			
+			var selectedRegions = locationRepository.GetRegionsByUserId(userId);
+
+			var model = new ManageRegionModel();
+			model.UserId = userId;
 			model.StateViewModel = new StateViewModel { States = GetStates() };
-			model.RegionViewModel = new RegionViewModel { Regions = GetRegions(Convert.ToInt32(ConfigurationManager.AppSettings["DefaultStateId"])) };
+
+			if (!selectedRegions.IsEmpty())
+			{
+				var mostCommonStateId = selectedRegions.GroupBy(r => r.StateId)
+														.OrderByDescending(r => r.Count())
+														.Select(s => s.Key)
+														.First();
+				//grab all regions that contain the stateId then create a list of ints (regionsIds)
+				var selectedRegionIds = (from r in selectedRegions
+											where r.StateId == mostCommonStateId
+											select r.Id).ToList();
+				model.RegionViewModel = new RegionViewModel { SelectedRegionIds = selectedRegionIds, Regions = GetRegions(mostCommonStateId)};
+				model.StateViewModel.SelectedStateId = mostCommonStateId;
+			}			
 
 			return View(model);
 		}
 
 		//
 		//POST: /Account/ManageRegions
-
 		[HttpPost, ValidateAntiForgeryToken]
-		public ActionResult ManageRegions(ManageRegionModels model)
+		public ActionResult ManageRegions(ManageRegionModel model)
 		{
 			if(ModelState.IsValid)
 			{
@@ -178,8 +204,8 @@ namespace StuffNThings.Controllers
 				try
 				{
 					var locationRepository = new LocationRepository(_connectionString);
-					var selectedRegion = model.RegionViewModel.SelectedRegionId;
-					locationRepository.PersistUserRegions(model.UserId, selectedRegion);
+					var selectedRegionIds = model.RegionViewModel.SelectedRegionIds;
+					locationRepository.PersistUserRegions(model.UserId, selectedRegionIds, model.StateViewModel.SelectedStateId);
 
 					return RedirectToAction("Manage", new { Message = ManageMessageId.UpdateRegionsSuccess });
 				}
@@ -191,11 +217,11 @@ namespace StuffNThings.Controllers
 
 			// If we got this far, something failed, redisplay form
 			var selectedStateId = model.StateViewModel.SelectedStateId;
-			var selectedRegionId = model.RegionViewModel.SelectedRegionId;
+			var lastSelectedRegionIds = model.RegionViewModel.SelectedRegionIds;
 			model.StateViewModel = new StateViewModel { States = GetStates() };
 			model.StateViewModel.SelectedStateId = selectedStateId;
 			model.RegionViewModel = new RegionViewModel { Regions = GetRegions(model.StateViewModel.SelectedStateId) };
-			model.RegionViewModel.SelectedRegionId = selectedRegionId;
+			model.RegionViewModel.SelectedRegionIds = lastSelectedRegionIds;
 
 			return View(model);
 		}
@@ -404,10 +430,10 @@ namespace StuffNThings.Controllers
 
 		#region Internal Methods
 
-		private IEnumerable<SelectListItem> GetRegions(int selectedStateId)
+		private IEnumerable<SelectListItem> GetRegions(int stateId)
 		{
-					var locationRepository = new LocationRepository(_connectionString);
-			var regions = locationRepository.GetAllRegionsByState(selectedStateId).Select(reg => new SelectListItem { Text = reg.Name, Value = reg.Id.ToString() });
+			var locationRepository = new LocationRepository(_connectionString);
+			var regions = locationRepository.GetAllRegionsByState(stateId).Select(reg => new SelectListItem { Text = reg.Name, Value = reg.Id.ToString() });
 
 			return new SelectList(regions, "Value", "Text");
 		}
@@ -422,12 +448,26 @@ namespace StuffNThings.Controllers
 		}
 
 		[HttpPost, AllowAnonymous]
-		public ActionResult GetRegionsJSON(int stateId)
+		public ActionResult GetRegionsJSON(int userId, int stateId)
 		{
 			var locationRepository = new LocationRepository(_connectionString);
-			var regions = locationRepository.GetAllRegionsByState(stateId).Select(reg => new SelectListItem { Text = reg.Name, Value = reg.Id.ToString() });
+			List<SelectListItem> regionList = new List<SelectListItem>();
 
-			return Json(new SelectList(regions, "Value", "Text")); 
+			var stateRegions = locationRepository.GetAllRegionsByState(stateId);
+			var selectedRegionIds = locationRepository.GetRegionsByUserId(userId).Where(r => r.StateId == stateId).Select(r => r.Id);
+									
+			if(!selectedRegionIds.IsEmpty())
+			{//user has selected regions
+
+				foreach(Region region in stateRegions)
+					regionList.Add(new SelectListItem { Value = region.Id.ToString(), Text = region.Name, Selected = selectedRegionIds.Contains(region.Id)});
+			}
+			else
+			{// user has no selected regions
+				regionList.AddRange(stateRegions.Select(r => new SelectListItem {Text = r.Name, Value = r.Id.ToString()}));
+			}
+
+			return Json(regionList);
 		}
 
 		 // TODO replace any hard coded values with user's selected values;

@@ -1,4 +1,4 @@
-﻿@model StuffNThings.Models.LocalPasswordModel
+﻿@model StuffNThings.Models.ManageProfileModel
 @{
     ViewBag.Title = "Manage Account";
 }
@@ -12,7 +12,20 @@
 <p>You're logged in as <strong>@User.Identity.Name</strong>.</p>
 
 @Html.ActionLink("Change Password", "ManagePassword", "Account") <br />
-@Html.ActionLink("Manage Regions", "ManageRegions", "Account")
+
+@if(Model.Regions != null && Model.Regions.Count > 0)
+{   <h4>Regions</h4>
+    <section id="sections">
+        @foreach(var region in Model.Regions)
+        {
+            <span class="label label-default">@region.Name</span>
+        }
+        <br /><br />
+        <a href="@Url.Action("ManageRegions", "Account")" class="btn btn-default">
+            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Manage Regions
+        </a>
+    </section>
+}
 
 <section id="externalLogins">
     @Html.Action("RemoveExternalLogins")
