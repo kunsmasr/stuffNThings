@@ -63,7 +63,7 @@ namespace StuffNThings.Controllers
 
 				// TODO: will need to loop through the actual selected regions (whenever a control is created to select multiple regions) when done.
 					//currently a region is created based on the single selection from the control and a hard coded region for sanity checking.
-				post.Regions = new[] {new Region { Id = Convert.ToInt32(collection.GetValue("SelectedRegionId").AttemptedValue) },
+				post.Regions = new List<Region>() {new Region { Id = Convert.ToInt32(collection.GetValue("SelectedRegionId").AttemptedValue) },
 															new Region {Id = 3}};
 
 				post.Id = postRepository.AddPost(post);

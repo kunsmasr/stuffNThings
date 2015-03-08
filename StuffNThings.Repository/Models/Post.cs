@@ -15,7 +15,7 @@ namespace StuffNThings.Repository.Models
 		public DateTime? CreatedDate { get; set; }
 		public DateTime? ModifiedDate { get; set; }
 		public int TypeOfPostId { get; set; } //TODO: Change this to TypeOfPost class
-		public IEnumerable<Region> Regions { get; set; }
+		public List<Region> Regions { get; set; }
 		//public IEnumerable<Tag> Tags { get; set; } //values such as new in box (id, value, abbreviation, description)
 		//public IEnumerable<Comment> Comments { get; set; }
 		//public IEnumerable<Picture> Pictures { get; set; }

@@ -52,7 +52,7 @@ namespace StuffNThings.Repository.Repositories
 				Post post = GetPostsFromCommand(command).Select(p => p).First();
 
 				var locationRepository = new LocationRepository(_connectionString);
-				post.Regions = locationRepository.GetRegionsByPostId(post.Id);
+				post.Regions = locationRepository.GetRegionsByPostId(post.Id).ToList();
 
 				return post;
 			}
