@@ -16,10 +16,10 @@ namespace StuffNThings.Repository.Models
 		public DateTime? ModifiedDate { get; set; }
 		public int TypeOfPostId { get; set; } //TODO: Change this to TypeOfPost class
 		public List<Region> Regions { get; set; }
+		public int UserId { get; set; }
 		//public IEnumerable<Tag> Tags { get; set; } //values such as new in box (id, value, abbreviation, description)
 		//public IEnumerable<Comment> Comments { get; set; }
 		//public IEnumerable<Picture> Pictures { get; set; }
 		//public IEnumerable<Category> Categories { get; set; }
-		//public int UserId { get; set; }
 	}
 }

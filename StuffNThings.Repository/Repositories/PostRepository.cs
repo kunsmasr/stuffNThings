@@ -116,7 +116,8 @@ namespace StuffNThings.Repository.Repositories
 				NumberOfBumps = (int)dr["NumberOfBumps"],
 				LastBumpDate = dr["LastBumpDate"] == DBNull.Value ? DateTime.MinValue : (DateTime)dr["LastBumpDate"],
 				CreatedDate = (DateTime)dr["CreatedDate"],
-				ModifiedDate = (DateTime)dr["ModifiedDate"]
+				ModifiedDate = (DateTime)dr["ModifiedDate"],
+				UserId = (int)dr["UserId"]
 				//TypeOfPostId = (int)dr [ "TypeOfPostId" ]
 			};
 

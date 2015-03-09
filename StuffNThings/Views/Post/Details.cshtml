@@ -74,7 +74,11 @@
     </div>
 </fieldset>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @if (Model.UserId.Equals(WebSecurity.CurrentUserId))
+    {
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) 
+        @: |
+    }
     @Html.ActionLink("Back to List", "Index", "Home")
 </p>
 
@@ -100,8 +104,9 @@
     }
 </div>
 
-
-
-<div id="commentEditor">
-    @Html.Partial("_CommentEditor", new ViewDataDictionary { { "postId", Model.Id } })
-</div>
+@if(WebSecurity.CurrentUserId > 0)
+{
+    <div id="commentEditor">
+        @Html.Partial("_CommentEditor", new ViewDataDictionary { { "postId", Model.Id } })
+    </div>
+}

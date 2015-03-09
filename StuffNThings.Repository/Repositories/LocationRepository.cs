@@ -117,7 +117,7 @@ namespace StuffNThings.Repository.Repositories
 
 		public void PersistUserRegions(int userId, IEnumerable<int> regionIds, int stateId)
 		{
-			var regionIdsString = string.Join("|", regionIds.Select(r => r.ToString()));
+			var regionIdsString = regionIds == null ? string.Empty : string.Join("|", regionIds.Select(r => r.ToString()));
 
 			using (var conn = new SqlConnection(_connectionString))
 			{

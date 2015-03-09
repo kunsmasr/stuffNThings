@@ -200,11 +200,12 @@ namespace StuffNThings.Controllers
 		{
 			if(ModelState.IsValid)
 			{
-				// Attempt to assign regoins to User
+				// Attempt to assign regions to User
 				try
 				{
 					var locationRepository = new LocationRepository(_connectionString);
-					var selectedRegionIds = model.RegionViewModel.SelectedRegionIds;
+
+					var selectedRegionIds = model.RegionViewModel == null ? null : model.RegionViewModel.SelectedRegionIds;
 					locationRepository.PersistUserRegions(model.UserId, selectedRegionIds, model.StateViewModel.SelectedStateId);
 
 					return RedirectToAction("Manage", new { Message = ManageMessageId.UpdateRegionsSuccess });
@@ -217,7 +218,7 @@ namespace StuffNThings.Controllers
 
 			// If we got this far, something failed, redisplay form
 			var selectedStateId = model.StateViewModel.SelectedStateId;
-			var lastSelectedRegionIds = model.RegionViewModel.SelectedRegionIds;
+			var lastSelectedRegionIds = model.RegionViewModel == null ? new List<int>() : model.RegionViewModel.SelectedRegionIds;
 			model.StateViewModel = new StateViewModel { States = GetStates() };
 			model.StateViewModel.SelectedStateId = selectedStateId;
 			model.RegionViewModel = new RegionViewModel { Regions = GetRegions(model.StateViewModel.SelectedStateId) };
